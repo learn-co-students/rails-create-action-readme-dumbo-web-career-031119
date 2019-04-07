@@ -34,11 +34,11 @@ doing.
 Open up the `posts_controller.rb` file. Let's do a few things to replicate the
 behavior we had in the console:
 
-1. Create a new `Post` instance
+1.  Create a new `Post` instance
 
-2. Pass in the parameters from the form
+2.  Pass in the parameters from the form
 
-3. Save the record
+3.  Save the record
 
 To build this behavior initially, let's copy and paste the code that we ran in
 the console. The only key difference is that now, instead of assigning
@@ -81,13 +81,13 @@ in the database even though we ran into an error page. Our form and `create`
 action are working properly. How do we know the record was successfully created?
 There are a couple of ways to check:
 
-1. Type `Post.last` into the Rails console, and it will display the most
-   recently created record. We can look at the record's `created_at` attribute to
-   ensure the timestamp is current.
+1.  Type `Post.last` into the Rails console, and it will display the most
+    recently created record. We can look at the record's `created_at` attribute to
+    ensure the timestamp is current.
 
-2. We can also simply scroll up through the Rails server logs. All SQL
-   statements are printed out in the log, so it's just a matter of locating the
-   correct `INSERT` statement (example below):
+2.  We can also simply scroll up through the Rails server logs. All SQL
+    statements are printed out in the log, so it's just a matter of locating the
+    correct `INSERT` statement (example below):
 
 ```shell
  (0.1ms)  begin transaction
@@ -98,9 +98,9 @@ SQL (0.7ms)  INSERT INTO "posts" ("title", "description", "created_at", "updated
 To fix the 'missing template' error, we simply need to redirect the user after
 they've filled out the form. Let's do two refactors:
 
-- Update the code with a redirect that leverages a route helper method
+-   Update the code with a redirect that leverages a route helper method
 
-- Refactor the `post` variable into an instance variable
+-   Refactor the `post` variable into an instance variable
 
 The revised `create` method should look something like this:
 
