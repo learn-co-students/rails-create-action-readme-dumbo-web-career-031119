@@ -40,3 +40,304 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2019-04-07 02:17:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (9.4ms)
+Completed 200 OK in 54ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-07 02:17:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered collection of /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (3.8ms)
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (40.1ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (173.9ms)
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-07 02:18:00 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 15ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=new):
+  
+app/controllers/posts_controller.rb:7:in `show'
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.5ms)
+Started GET "/posts/1" for 127.0.0.1 at 2019-04-07 02:19:09 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 616ms (Views: 589.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-07 02:20:24 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/Jeff/Desktop/Coding/Flatiron Proj/rails-create-action-readme-dumbo-web-career-031119/app/views/posts/new.html.erb:1: syntax error, unexpected tLABEL, expecting '='
+...  form_tag (posts_path, method: "post", action: "new") do @o...
+...                        ^~~~~~~
+/mnt/c/Users/Jeff/Desktop/Coding/Flatiron Proj/rails-create-action-readme-dumbo-web-career-031119/app/views/posts/new.html.erb:1: syntax error, unexpected ',', expecting end
+...ag (posts_path, method: "post", action: "new") do @output_bu...
+...                              ^
+/mnt/c/Users/Jeff/Desktop/Coding/Flatiron Proj/rails-create-action-readme-dumbo-web-career-031119/app/views/posts/new.html.erb:1: syntax error, unexpected ')', expecting end
+... method: "post", action: "new") do @output_buffer.safe_appen...
+...                              ^
+/mnt/c/Users/Jeff/Desktop/Coding/Flatiron Proj/rails-create-action-readme-dumbo-web-career-031119/app/views/posts/new.html.erb:10: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/posts/new.html.erb:1: syntax error, unexpected tLABEL, expecting '='
+app/views/posts/new.html.erb:1: syntax error, unexpected ',', expecting end
+app/views/posts/new.html.erb:1: syntax error, unexpected ')', expecting end
+app/views/posts/new.html.erb:10: syntax error, unexpected ensure, expecting end-of-input
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.4ms)
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-07 02:24:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (67.0ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `posts_path' for #<#<Class:0x00007fffe19039e8>:0x00007fffe1900130>
+Did you mean?  post_path):
+    1: <%= form_tag(posts_path, method: "post", action: "new") do %>
+    2:   <label>Post title:</label><br>
+    3:   <%= text_field_tag :title %><br>
+    4: 
+  
+app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3392528953574337590_70368488802020'
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (104.5ms)
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-07 02:25:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (35.3ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"posts"} missing required keys: [:id]):
+    1: <%= form_tag(posts_path, method: "post", action: "new") do %>
+    2:   <label>Post title:</label><br>
+    3:   <%= text_field_tag :title %><br>
+    4: 
+  
+app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__265823668255359283_70368648381580'
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (129.6ms)
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-07 02:27:16 -0400
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (26.1ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `posts_path' for #<#<Class:0x00007f6dd4c39c10>:0x00007f6dd4c38b58>
+Did you mean?  post_path):
+    1: <%= form_tag(posts_path, method: "post", action: "new") do %>
+    2:   <label>Post title:</label><br>
+    3:   <%= text_field_tag :title %><br>
+    4: 
+  
+app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__265823668255359283_70054848876980'
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (93.7ms)
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-07 02:27:19 -0400
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (19.7ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `posts_path' for #<#<Class:0x00007f6dd4c39c10>:0x00007f6dd4af61c8>
+Did you mean?  post_path):
+    1: <%= form_tag(posts_path, method: "post", action: "new") do %>
+    2:   <label>Post title:</label><br>
+    3:   <%= text_field_tag :title %><br>
+    4: 
+  
+app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__265823668255359283_70054848214260'
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (93.9ms)
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-07 02:27:19 -0400
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (29.6ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `posts_path' for #<#<Class:0x00007f6dd4c39c10>:0x00007f6dd4a03f40>
+Did you mean?  post_path):
+    1: <%= form_tag(posts_path, method: "post", action: "new") do %>
+    2:   <label>Post title:</label><br>
+    3:   <%= text_field_tag :title %><br>
+    4: 
+  
+app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__265823668255359283_70054847685560'
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (94.1ms)
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-07 02:27:39 -0400
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"posts"} missing required keys: [:id]):
+    1: <%= form_tag(post_path, method: "post", action: "new") do %>
+    2:   <label>Post title:</label><br>
+    3:   <%= text_field_tag :title %><br>
+    4: 
+  
+app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__265823668255359283_70054847285260'
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.8ms)
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-07 02:28:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (47.7ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `posts_path' for #<#<Class:0x00007fffd02c2158>:0x00007fffd0302f50>
+Did you mean?  post_path):
+    1: <%= form_tag(posts_path, method: "post", action: "new") do %>
+    2:   <label>Post title:</label><br>
+    3:   <%= text_field_tag :title %><br>
+    4: 
+  
+app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb___3285749866607038254_70368342972700'
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jwy5140/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (103.9ms)
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-07 02:31:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 370ms (Views: 344.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts/new" for 127.0.0.1 at 2019-04-07 02:31:53 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tU42IYahGKzLw5lq3XZpzFFUtDJy5KYar11yTWsUOCMu0lqFuHfVicAgmzOUEX6K94AtogBWXV0EyA7VNKdcbQ==", "title"=>"abc", "description"=>"abc", "commit"=>"Submit Post"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "abc"], ["description", "abc"], ["created_at", "2019-04-07 06:31:53.290859"], ["updated_at", "2019-04-07 06:31:53.290859"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 18ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2019-04-07 02:31:53 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 50.0ms | ActiveRecord: 0.4ms)
+
+
